@@ -360,10 +360,16 @@ h6 {
 }
 
 .portfolio .preview__box {
-    height: 400px;
+    height: 200px;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .portfolio .preview__box {
+        height: 400px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -385,6 +391,7 @@ h6 {
 .portfolio .technologies {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin: 40px 0;
@@ -393,19 +400,39 @@ h6 {
 .portfolio .technologies li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     padding: 5px 10px;
+}
+
+@media (min-width: 768) {
+    .portfolio .technologies li {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
 }
 
 .portfolio .content {
     text-align: center;
-    padding: 0 50px;
+    padding: 0 20px;
+}
+
+@media (min-width: 768) {
+    .portfolio .content {
+        padding: 0 50px;
+    }
+}
+
+.portfolio .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portfolio .links a {
     font-weight: 600;
     font-size: 20px;
     margin: 0 10px;
+    width: fit-content;
 }
 
 .footer {
