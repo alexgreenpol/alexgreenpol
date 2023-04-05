@@ -383,9 +383,17 @@ h6 {
     transition: 0.5s ease-out;
 }
 
-.portfolio .preview__box:hover img {
+.portfolio .preview__box:not(.static):hover img {
     transform: translateY(calc(-100% + 400px));
     transition: 15s ease-out;
+}
+
+.portfolio .preview__box.static {
+    display: flex;
+}
+
+.portfolio .preview__box.static img {
+    object-fit: cover;
 }
 
 .portfolio .technologies {
